@@ -2,14 +2,22 @@
 pipeline {
 
     agent{
-        node { label 'workstation'}
+        // node { label 'workstation'}
+        // label java , it will run on the node called as JAVA
+        label 'JAVA'
     }
 
     stages{
 
-        stage('One'){
+        stage('Master Node'){
             steps{
                 sh 'echo hello'
+            }
+        }
+
+        stage('Agent Node'){
+            steps{
+                sh 'echo Hello'
             }
         }
     }
