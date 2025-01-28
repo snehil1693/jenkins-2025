@@ -31,5 +31,12 @@ pipeline {
                 sh 'echo Hello'
             }
         }
+
+        post{
+
+            always{
+                sh 'echo Post Steps'
+            }
+        }
     }
 }
