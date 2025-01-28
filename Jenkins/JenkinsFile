@@ -32,11 +32,14 @@ pipeline {
             }
         }
 
-        post{
+       
+    }
+
+     post{
+        agent any 
 
             always{
-                sh 'echo Post Steps'
+                sh 'echo Post Steps '
             }
         }
-    }
 }
